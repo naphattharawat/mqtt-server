@@ -13,6 +13,7 @@ function setup() {
 }
 var authenticate = function (client, username, password, callback) {
     var authorized = (username === 'mqtt' && password.toString() === 'password');
+    var authorized = (username === process.env.MQTT_USERNAME && password.toString() === process.env.MQTT_PASSWORD);
     if (authorized) client.user = username;
     callback(null, authorized);
 }
