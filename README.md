@@ -6,8 +6,8 @@
 git clone https://github.com/naphattharawat/mqtt-server
 cd mqtt-server
 npm i
+cp .env.text .env
 ```
-
 ## Running
 
 ```
